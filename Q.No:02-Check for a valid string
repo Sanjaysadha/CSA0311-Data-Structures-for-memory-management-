@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int ValidateString(char *str) {
+    while (*str) {
+        if (!isalnum(*str)) {
+            return 0; // Invalid string
+        }
+        str++;
+    }
+    return 1; // Valid string
+}
+
+int main() {
+    char input[]="Hello123";
+    if (ValidateString(input)) {
+        printf("The given string is valid.\n");
+    } else {
+        printf("The given string is invalid.\n");
+    }
+return 0;
+}
